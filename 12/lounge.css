@@ -14,3 +14,13 @@ body{
 em{
   font-family: "Cascadia Mono";
 }
+body{
+	color: royalblue;
+	color: rgb(65, 105, 225);
+	color: #4169E1CC;
+	color: rgba(39,177,182,0.8);
+	color: #ba2f7b;
+  color: rgba(rgb(164, 173, 30), rgb(219, 122, 138), 
+  rgb(123, 255, 0), alpha);
+
+}
