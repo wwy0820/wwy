@@ -1,8 +1,6 @@
 body {
 	font-size: small; /* 新的属性值，请自行了解 */
 	font-family: Verdana， Helvetica， Arial;
-  padding: 0;
-  margin: 0;
 }
 
 h1, h2 {
@@ -16,7 +14,15 @@ h1 {
 h2 {
 	font-size: 1.3em;
 }
-p{
-  padding: 0;
-  margin: 0;
+.guarantee{
+  border-color: white;
+  border-width: 1px;
+  border-style: dashed;
+  background-color: #a7cece; 
+  padding: 25px;
+  margin: 30px;
+  line-height: 1.9em;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #444444;
 }
