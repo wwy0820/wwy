@@ -61,3 +61,13 @@ h2 {
 .artist{
   font-weight: bold;
 }
+.elixir a:link {
+  color: #007e7e;
+}
+.elixir a:visited {
+  color: #333333;
+}
+.elixir a:hover {
+  background: #f88394;
+  color:#0d5353;
+}
