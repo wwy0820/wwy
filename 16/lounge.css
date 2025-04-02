@@ -54,6 +54,10 @@ h2 {
   background-repeat: repeat-x;
   text-align: center;
   line-height: 1;
-  
 }
-
+.cd{
+  font-style: italic;
+}
+.artist{
+  font-weight: bold;
+}
