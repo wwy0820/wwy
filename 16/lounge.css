@@ -3,7 +3,7 @@ body {
 	font-family: Verdana， Helvetica， Arial;
 }
 
-h1, h2 {
+h1{
 	color: #007e7e; /* 将标题设置为一种青绿色，使他和 logo 更相合 */
 }
 
@@ -13,6 +13,12 @@ h1 {
 
 h2 {
 	font-size: 1.3em;
+}
+.elixirs h2{
+  color: black;
+}
+.elixirs h3{
+  color: #d12c47
 }
 .guarantee{
   border-color: white;
@@ -30,10 +36,10 @@ h2 {
   background-position: top left;
   padding-left: 80px;
   margin-right: 250px;
-  border-top-right-radius: 1000em;
-  border-bottom-left-radius: 1000em;
-  border-top-left-radius: 1000em;
-  border-bottom-right-radius: 1105em; 
+  border-top-right-radius: 2em;
+  border-bottom-left-radius: 2em;
+  border-top-left-radius: 0em;
+  border-bottom-right-radius: 0em; 
 }
 .elixirs{
   border-width: thin;
@@ -46,7 +52,8 @@ h2 {
   margin-left: 20px;
   background-image: url(images/cocktail.gif);
   background-repeat: repeat-x;
-  text-align: center
-  ;
+  text-align: center;
+  line-height: 1;
+  
 }
 
