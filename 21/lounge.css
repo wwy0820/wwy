@@ -75,3 +75,13 @@ h2 {
 .an{
   color:blue;
 }
+.left{
+  margin-right: 10PX;
+}
+.right{
+  margin-left: 20px;
+}
+.ruler{
+  display: inline-block;
+  width: 30px;
+}
