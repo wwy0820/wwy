@@ -101,6 +101,14 @@ float: right;}
   top: 30px;
   left: 45%;
 }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .coupon{
   position: fixed;
   top: 350px;
@@ -113,4 +121,7 @@ float: right;}
 }
 .coupon:hover{
   left: 0px;
+}
+.aaa{
+  float: right;
 }
