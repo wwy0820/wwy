@@ -5,6 +5,15 @@ h1{
   margin-bottom: 16px;
   text-align: center;
 }
-.image-with-caption {
+.image-with-a{
   text-align: center;
+}
+.image-with-a a {
+  display: block;
+  margin-top: 8px;
+  color: #00205b;
+  text-decoration: none;
+}
+.image-with-a a:hover {
+  text-decoration: underline;
 }
