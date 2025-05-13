@@ -1,0 +1,158 @@
+<!DOCTYPE html> <!-- 声明文档类型为 HTML5，告知浏览器使用 HTML5 标准解析该文档 -->
+<html lang="ja"> 
+  <!-- 网页头部，包含一些元数据和引用资源，不会在页面上直接显示 -->
+  <head>
+    <!-- 设置文档的字符编码为 UTF-8，支持多种语言字符 -->
+    <meta charset="utf-8">
+    <!-- 设置网页在浏览器标签页显示的标题 -->
+    <title>京都大学</title>
+    <!-- 链接外部 CSS 文件，用于定义网页的样式 -->
+    <link type="text/css" rel="stylesheet" href="kyoto.css">
+    <!-- 内联样式表，用于定义网页的样式 -->
+    <style>
+      /* 设置页面主体的字体、最大宽度、居中显示和内边距 */
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      /* 定义图片网格容器的样式，使用弹性布局，允许换行并均匀分布子元素 */
+      .image-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      
+      /* 定义单个图片项的样式，设置宽度并使用弹性布局垂直排列子元素 */
+      .image-item {
+        width: calc(25% - 20px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+        transition: transform 0.3s ease; /* 给父容器添加过渡效果 */
+      }
+      
+      .image-item:hover {
+        transform: scale(1.05); /* 鼠标悬停时放大父容器 */
+      }
+      
+      .image-item img {
+        width: 100%;
+        height: auto;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        margin-bottom: 0;
+      }
+      
+      /* 定义图片项中链接的样式，设置初始颜色为悬停变深后的颜色，并添加下划线 */
+      .image-item a {
+        text-decoration: underline; /* 添加下划线 */
+        color: #00205b; /* 设置初始颜色为悬停变深后的颜色 */
+        font-weight: bold;
+        word-break: keep-all;
+        background-color: #f0f0f0; 
+        padding: 5px 10px; 
+        border-radius: 4px; 
+        transition: background-color 0.3s ease; /* 移除颜色过渡，只保留背景颜色过渡 */
+        width: 100%; 
+        box-sizing: border-box; 
+      }
+      
+      /* 删除超链接悬停时颜色变深样式 */
+      .image-item:hover a {
+        /* 移除颜色变深样式 */
+      }
+      
+      /* 媒体查询，当屏幕宽度小于等于 900px 时，调整图片项的宽度 */
+      @media (max-width: 900px) {
+        .image-item {
+          width: calc(50% - 15px);
+        }
+      }
+      
+      /* 媒体查询，当屏幕宽度小于等于 600px 时，调整图片项的宽度为 100% */
+      @media (max-width: 600px) {
+        .image-item {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <!-- 网页主体，包含页面上实际显示的内容 -->
+  <body>
+    <!-- 一级标题，显示页面的主要标题 -->
+    <h1>Features</h1>
+    <!-- 图片网格容器，用于容纳多个图片项 -->
+    <div class="image-grid">
+      <!-- 第一行 -->
+      <!-- 单个图片项，包含图片和链接 -->
+      <div class="image-item">
+        <!-- 图片元素，显示图片并提供替代文本 -->
+        <img src="images/1.webp" alt="京都大学紹介動画">
+        <!-- 链接元素，点击后跳转到指定网址 -->
+        <a href="https://www.channel.pr.kyoto-u.ac.jp">京都大学紹介動画<br>Introducing Kyoto University</a>
+      </div>
+      
+      <!-- 单个图片项，包含图片和链接 -->
+      <div class="image-item">
+        <!-- 图片元素，显示图片并提供替代文本 -->
+        <img src="images/2.webp" alt="本学の動画がまとめて楽しめるサイト">
+        <!-- 链接元素，点击后跳转到指定网址 -->
+        <a href="https://www.channel.pr.kyoto-u.ac.jp">本学の動画がまとめて楽しめるサイト<br>KyotoU Channel</a>
+      </div>
+      
+      <!-- 单个图片项，包含图片和链接 -->
+      <div class="image-item">
+        <!-- 图片元素，显示图片并提供替代文本 -->
+        <img src="images/3.webp" alt="京都大学基金">
+        <!-- 链接元素，点击后跳转到指定网址 -->
+        <a href="https://www.kikin.kyoto-u.ac.jp/">京都大学基金</a>
+      </div>
+      
+      <!-- 单个图片项，包含图片和链接 -->
+      <div class="image-item">
+        <!-- 图片元素，显示图片并提供替代文本 -->
+        <img src="images/4.webp" alt="オープンコースウェア">
+        <!-- 链接元素，点击后跳转到指定网址 -->
+        <a href="https://www.oc.kyoto-u.ac.jp/">オープンコースウェア</a>
+      </div>
+      
+      <!-- 第二行 -->
+      <!-- 单个图片项，包含图片和链接 -->
+      <div class="image-item">
+        <!-- 图片元素，显示图片并提供替代文本 -->
+        <img src="images/5.webp" alt="大学案内冊子">
+        <!-- 链接元素，点击后跳转到指定网址 -->
+        <a href="https://www.kyoto-u.ac.jp/">大学案内冊子<br>「知と自由への誘い」</a>
+      </div>
+      
+      <!-- 单个图片项，包含图片和链接 -->
+      <div class="image-item">
+        <!-- 图片元素，显示图片并提供替代文本 -->
+        <img src="images/6.webp" alt="京都大学アカデミックキャラバン">
+        <!-- 链接元素，点击后跳转到指定网址 -->
+        <a href="https://www.kuac.kyoto-u.ac.jp/">京都大学アカデミックキャラバン</a>
+      </div>
+      
+      <!-- 单个图片项，包含图片和链接 -->
+      <div class="image-item">
+        <!-- 图片元素，显示图片并提供替代文本 -->
+        <img src="images/7.webp" alt="京都大学学術リポジトリ">
+        <!-- 链接元素，点击后跳转到指定网址 -->
+        <a href="https://commons.research.kyoto-u.ac.jp/">京都大学学術リポジトリ</a>
+      </div>
+      
+      <!-- 单个图片项，包含图片和链接 -->
+      <div class="image-item">
+        <!-- 图片元素，显示图片并提供替代文本 -->
+        <img src="images/8.webp" alt="京都大学公式サイト">
+        <!-- 链接元素，点击后跳转到指定网址 -->
+        <a href="https://www.kyoto-u.ac.jp/">京都大学公式サイト</a>
+      </div>
+    </div>
+  </body>
+</html>
