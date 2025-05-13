@@ -39,6 +39,7 @@
       
       .image-item:hover {
         transform: scale(1.05); /* 鼠标悬停时放大父容器 */
+        transition: transform 0.3s ease;
       }
       
       .image-item img {
@@ -48,13 +49,13 @@
         margin-bottom: 0;
       }
       
-      /* 定义图片项中链接的样式，设置初始颜色为悬停变深后的颜色，并添加下划线 */
+      /* 定义图片项中链接的样式 */
       .image-item a {
         text-decoration: underline; /* 添加下划线 */
-        color: #00205b; /* 设置初始颜色为悬停变深后的颜色 */
+        color: #00205b; /* 设置链接颜色 */
         font-weight: bold;
         word-break: keep-all;
-        background-color: #f0f0f0; 
+        background-color: #d9dbde; 
         padding: 5px 10px; 
         border-radius: 4px; 
         transition: background-color 0.3s ease; /* 移除颜色过渡，只保留背景颜色过渡 */
@@ -62,10 +63,7 @@
         box-sizing: border-box; 
       }
       
-      /* 删除超链接悬停时颜色变深样式 */
-      .image-item:hover a {
-        /* 移除颜色变深样式 */
-      }
+      
       
       /* 媒体查询，当屏幕宽度小于等于 900px 时，调整图片项的宽度 */
       @media (max-width: 900px) {
