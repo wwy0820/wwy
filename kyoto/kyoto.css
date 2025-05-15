@@ -1,9 +1,13 @@
 h1{
-  color: #00205b;
-  font-size: 24px;
-  line-height: 31px;
-  margin-bottom: 30px; /* 合并 b.html 中的样式 */
+  color: rgb(0, 32, 91);
   text-align: center;
+  margin: 0px 0px 16px;
+  padding: 0px;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    font-family: Lora, "Noto Sans JP", serif;
 }
 .image-with-a{
   text-align: center;

@@ -40,6 +40,7 @@
       .image-item:hover {
         transform: scale(1.05); /* 鼠标悬停时放大父容器 */
         transition: transform 0.3s ease;
+        text-decoration:underline;
       }
       
       .image-item img {
@@ -51,7 +52,7 @@
       
       /* 定义图片项中链接的样式 */
       .image-item a {
-        text-decoration: underline; /* 添加下划线 */
+
         color: #00205b; /* 设置链接颜色 */
         font-weight: bold;
         word-break: keep-all;
@@ -60,7 +61,11 @@
         border-radius: 4px; 
         transition: background-color 0.3s ease; /* 移除颜色过渡，只保留背景颜色过渡 */
         width: 100%; 
-        box-sizing: border-box; 
+        box-sizing: border-box;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
       }
       
       
