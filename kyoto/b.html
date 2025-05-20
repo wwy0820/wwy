@@ -34,17 +34,20 @@
         align-items: center;
         text-align: center;
         margin-bottom: 0; 
-        transition: transform 0.3s ease; 
-        justify-content: space-between; 
+        /* 隐藏图片放大后超出的部分 */
+        overflow: hidden; 
+      
       }
 
       .image-item img {
         width: 100%;
         height: auto;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        /* 消除图片底部间隙 */
-        display: block; 
         margin-bottom: 0;
+        transition: transform 0.3s ease; 
+        transform-origin: center; 
+        position: relative; 
+        z-index: 1;
       }
 
       .image-item a {
@@ -55,61 +58,28 @@
         padding: 10px; 
         border-radius: 4px; 
         transition: background-color 0.3s ease; 
-        /* 以块级元素显示，方便设置宽度和高度 */
-        display: block; 
+        display: flex; 
+        justify-content: flex-start; 
+        align-items: center;
         width: 100%; 
-        /* 让内边距和边框包含在宽度内 */
         box-sizing: border-box; 
         text-decoration: none;
         unicode-bidi: isolate;
-        text-align: center; 
         overflow: hidden;
         text-overflow: ellipsis;
-        display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2; 
-        /* 确保超链接顶部没有间距 */
         margin-top: 0; 
-        /* 设置固定高度，保证所有超链接背景区域大小一致 */
         height: 60px; 
-        /* 垂直居中内容 */
-        display: flex; 
-        justify-content: center;
-        align-items: center;
+        z-index: 2;
       }
-      
-      .image-item:hover {
-        transform: scale(1.05); /* 鼠标悬停时放大父容器 */
-        transition: transform 0.3s ease;
-        text-decoration:underline;
-      }
-      
-      .image-item img {
-        width: 100%;
-        height: auto;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        margin-bottom: 0;
-      }
-      
-      /* 定义图片项中链接的样式 */
-      .image-item a {
 
-        color: #00205b; /* 设置链接颜色 */
-        font-weight: bold;
-        word-break: keep-all;
-        background-color: #d9dbde; 
-        padding: 10px; 
-        border-radius: 4px; 
-        transition: background-color 0.3s ease; /* 移除颜色过渡，只保留背景颜色过渡 */
-        /* 新增样式 */
-        display: block; /* 以块级元素显示，方便设置宽度 */
-        width: 100%; /* 固定宽度，和图片宽度一致 */
-        box-sizing: border-box; /* 让内边距和边框包含在宽度内 */
-        text-decoration: none;
-        unicode-bidi: isolate;
+      .image-item img:hover {
+        transform: scale(1.1); 
       }
-      
-      
+      /* 当鼠标悬停在图片上时，让同一容器内的超链接出现下划线 */
+      .image-item img:hover + a {
+        text-decoration: underline;
+      }
       
       /* 媒体查询，当屏幕宽度小于等于 900px 时，调整图片项的宽度 */
       @media (max-width: 900px) {
@@ -138,7 +108,7 @@
         <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/1.webp" alt="京都大学紹介動画">
         <!-- 链接元素，点击后跳转到指定网址 -->
-        <a href="https://www.channel.pr.kyoto-u.ac.jp">京都大学紹介動画<br>Introducing Kyoto University</a>
+        <a href="https://www.channel.pr.kyoto-u.ac.jp">京都大学紹介動画 「Introducing Kyoto University」</a>
       </div>
       
       <!-- 单个图片项，包含图片和链接 -->
@@ -162,7 +132,7 @@
         <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/4.webp" alt="オープンコースウェア">
         <!-- 链接元素，点击后跳转到指定网址 -->
-        <a href="https://www.oc.kyoto-u.ac.jp/">オープンコースウェア</a>
+        <a href="https://www.oc.kyoto-u.ac.jp/">KYOTO GLOBAL ENGAGEMENT</a>
       </div>
       
       <!-- 第二行 -->
@@ -171,7 +141,7 @@
         <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/5.webp" alt="大学案内冊子">
         <!-- 链接元素，点击后跳转到指定网址 -->
-        <a href="https://www.kyoto-u.ac.jp/">大学案内冊子<br>「知と自由への誘い」</a>
+        <a href="https://www.kyoto-u.ac.jp/">大学案内冊子 知と自由への誘い</a>
       </div>
       
       <!-- 单个图片项，包含图片和链接 -->
@@ -195,7 +165,7 @@
         <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/8.webp" alt="京都大学公式サイト">
         <!-- 链接元素，点击后跳转到指定网址 -->
-        <a href="https://www.kyoto-u.ac.jp/">京都大学公式サイト</a>
+        <a href="https://www.kyoto-u.ac.jp/">広報誌     紅萠</a>
       </div>
     </div>
   </body>
