@@ -10,7 +10,6 @@
     <link type="text/css" rel="stylesheet" href="kyoto.css">
     <!-- 内联样式表，用于定义网页的样式 -->
     <style>
-      /* 设置页面主体的字体、最大宽度、居中显示和内边距 */
       body {
         font-family: Arial, sans-serif;
         max-width: 1200px;
@@ -18,32 +17,26 @@
         padding: 20px;
       }
       
-      /* 定义图片网格容器的样式，使用弹性布局，允许换行并均匀分布子元素 */
       .image-grid {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 20px; /* 统一控制左右和上下间距 */
+        gap: 20px;
       }
       
-      /* 定义单个图片项的样式，设置宽度并使用弹性布局垂直排列子元素 */
       .image-item {
         width: calc(25% - 20px);
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-bottom: 0; 
-        /* 隐藏图片放大后超出的部分 */
         overflow: hidden; 
-      
       }
 
       .image-item img {
         width: 100%;
         height: auto;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        margin-bottom: 0;
         transition: transform 0.3s ease; 
         transform-origin: center; 
         position: relative; 
@@ -55,7 +48,7 @@
         font-weight: bold;
         word-break: keep-all;
         background-color: #d9dbde; 
-        padding: 10px; 
+        padding: 10px 12px; 
         border-radius: 4px; 
         transition: background-color 0.3s ease; 
         display: flex; 
@@ -67,28 +60,26 @@
         unicode-bidi: isolate;
         overflow: hidden;
         text-overflow: ellipsis;
-        -webkit-box-orient: vertical;
-        margin-top: 0; 
         height: 60px; 
         z-index: 2;
+        font-family: "Noto Sans JP", sans-serif;
       }
 
-      .image-item img:hover {
+      /* 合并悬停效果 */
+      .image-item:hover img {
         transform: scale(1.1); 
       }
-      /* 当鼠标悬停在图片上时，让同一容器内的超链接出现下划线 */
-      .image-item img:hover + a {
+
+      .image-item:hover a {
         text-decoration: underline;
       }
       
-      /* 媒体查询，当屏幕宽度小于等于 900px 时，调整图片项的宽度 */
       @media (max-width: 900px) {
         .image-item {
           width: calc(50% - 15px);
         }
       }
       
-      /* 媒体查询，当屏幕宽度小于等于 600px 时，调整图片项的宽度为 100% */
       @media (max-width: 600px) {
         .image-item {
           width: 100%;
@@ -108,10 +99,10 @@
         <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/1.webp" alt="京都大学紹介動画">
         <!-- 链接元素，点击后跳转到指定网址 -->
-        <a href="https://www.channel.pr.kyoto-u.ac.jp">京都大学紹介動画 「Introducing Kyoto University」</a>
+        <a href="https://www.channel.pr.kyoto-u.ac.jp">京都大学紹介動画「Introducing Kyoto University」</a>
       </div>
       
-      <!-- 单个图片项，包含图片和链接 -->
+      <!-- 后续图片项保持原样，此处省略 -->
       <div class="image-item">
         <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/2.webp" alt="本学の動画がまとめて楽しめるサイト">
@@ -119,7 +110,6 @@
         <a href="https://www.channel.pr.kyoto-u.ac.jp">本学の動画がまとめて楽しめるサイト<br>KyotoU Channel</a>
       </div>
       
-      <!-- 单个图片项，包含图片和链接 -->
       <div class="image-item">
         <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/3.webp" alt="京都大学基金">
@@ -127,7 +117,6 @@
         <a href="https://www.kikin.kyoto-u.ac.jp/">京都大学基金</a>
       </div>
       
-      <!-- 单个图片项，包含图片和链接 -->
       <div class="image-item">
         <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/4.webp" alt="オープンコースウェア">
@@ -135,8 +124,6 @@
         <a href="https://www.oc.kyoto-u.ac.jp/">KYOTO GLOBAL ENGAGEMENT</a>
       </div>
       
-      <!-- 第二行 -->
-      <!-- 单个图片项，包含图片和链接 -->
       <div class="image-item">
         <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/5.webp" alt="大学案内冊子">
@@ -144,7 +131,6 @@
         <a href="https://www.kyoto-u.ac.jp/">大学案内冊子 知と自由への誘い</a>
       </div>
       
-      <!-- 单个图片项，包含图片和链接 -->
       <div class="image-item">
         <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/6.webp" alt="京都大学アカデミックキャラバン">
@@ -152,7 +138,6 @@
         <a href="https://www.kuac.kyoto-u.ac.jp/">京都大学アカデミックキャラバン</a>
       </div>
       
-      <!-- 单个图片项，包含图片和链接 -->
       <div class="image-item">
         <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/7.webp" alt="京都大学学術リポジトリ">
@@ -160,7 +145,6 @@
         <a href="https://commons.research.kyoto-u.ac.jp/">京都大学学術リポジトリ</a>
       </div>
       
-      <!-- 单个图片项，包含图片和链接 -->
       <div class="image-item">
         <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/8.webp" alt="京都大学公式サイト">

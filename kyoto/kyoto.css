@@ -3,12 +3,11 @@ h1{
   text-align: center;
   margin: 0px 0px 16px;
   padding: 0px;
-    border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    border-image: initial;
-    font-family: Lora, "Noto Sans JP", serif;
+  border-width: 0px;
+  font: 500 20px / 1.25 "Lora", "Noto Sans JP", serif;
+  display: block;
 }
+
 .image-with-a{
   text-align: center;
 }
