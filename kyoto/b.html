@@ -1,15 +1,17 @@
 <!DOCTYPE html> <!-- 声明文档类型为 HTML5，告知浏览器使用 HTML5 标准解析该文档 -->
 <html lang="ja"> 
-  <!-- 网页头部，包含一些元数据和引用资源，不会在页面上直接显示 -->
   <head>
-    <!-- 设置文档的字符编码为 UTF-8，支持多种语言字符 -->
     <meta charset="utf-8">
-    <!-- 设置网页在浏览器标签页显示的标题 -->
     <title>京都大学</title>
-    <!-- 链接外部 CSS 文件，用于定义网页的样式 -->
     <link type="text/css" rel="stylesheet" href="kyoto.css">
-    <!-- 内联样式表，用于定义网页的样式 -->
     <style>
+      :root {
+        --primary-color: #00205b;
+        --secondary-bg: #d9dbde;
+        --item-gap: 20px;
+        --hover-scale: 1.1;
+      }
+
       body {
         font-family: Arial, sans-serif;
         max-width: 1200px;
@@ -21,11 +23,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 20px;
+        gap: var(--item-gap);
       }
       
       .image-item {
-        width: calc(25% - 20px);
+        width: calc(25% - var(--item-gap));
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -44,10 +46,10 @@
       }
 
       .image-item a {
-        color: #00205b; 
+        color: var(--primary-color); 
         font-weight: bold;
         word-break: keep-all;
-        background-color: #d9dbde; 
+        background-color: var(--secondary-bg); 
         padding: 10px 12px; 
         border-radius: 4px; 
         transition: background-color 0.3s ease; 
@@ -63,11 +65,14 @@
         height: 60px; 
         z-index: 2;
         font-family: "Noto Sans JP", sans-serif;
+        
+       
+      
+        
       }
 
-      /* 合并悬停效果 */
       .image-item:hover img {
-        transform: scale(1.1); 
+        transform: scale(var(--hover-scale)); 
       }
 
       .image-item:hover a {
@@ -87,68 +92,46 @@
       }
     </style>
   </head>
-  <!-- 网页主体，包含页面上实际显示的内容 -->
   <body>
-    <!-- 一级标题，显示页面的主要标题 -->
     <h1>Features</h1>
-    <!-- 图片网格容器，用于容纳多个图片项 -->
     <div class="image-grid">
-      <!-- 第一行 -->
-      <!-- 单个图片项，包含图片和链接 -->
       <div class="image-item">
-        <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/1.webp" alt="京都大学紹介動画">
-        <!-- 链接元素，点击后跳转到指定网址 -->
         <a href="https://www.channel.pr.kyoto-u.ac.jp">京都大学紹介動画「Introducing Kyoto University」</a>
       </div>
       
-      <!-- 后续图片项保持原样，此处省略 -->
       <div class="image-item">
-        <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/2.webp" alt="本学の動画がまとめて楽しめるサイト">
-        <!-- 链接元素，点击后跳转到指定网址 -->
         <a href="https://www.channel.pr.kyoto-u.ac.jp">本学の動画がまとめて楽しめるサイト<br>KyotoU Channel</a>
       </div>
       
       <div class="image-item">
-        <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/3.webp" alt="京都大学基金">
-        <!-- 链接元素，点击后跳转到指定网址 -->
-        <a href="https://www.kikin.kyoto-u.ac.jp/">京都大学基金</a>
+        <a href="https://www.kikin.kyoto-u.ac.jp/">京都大学基金 ご協力のお願い</a>
       </div>
       
       <div class="image-item">
-        <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/4.webp" alt="オープンコースウェア">
-        <!-- 链接元素，点击后跳转到指定网址 -->
         <a href="https://www.oc.kyoto-u.ac.jp/">KYOTO GLOBAL ENGAGEMENT</a>
       </div>
       
       <div class="image-item">
-        <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/5.webp" alt="大学案内冊子">
-        <!-- 链接元素，点击后跳转到指定网址 -->
         <a href="https://www.kyoto-u.ac.jp/">大学案内冊子 知と自由への誘い</a>
       </div>
       
       <div class="image-item">
-        <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/6.webp" alt="京都大学アカデミックキャラバン">
-        <!-- 链接元素，点击后跳转到指定网址 -->
-        <a href="https://www.kuac.kyoto-u.ac.jp/">京都大学アカデミックキャラバン</a>
+        <a href="https://www.kuac.kyoto-u.ac.jp/">受験生のための総合情報サイト 京都大学受験生ナビゲーション</a>
       </div>
       
       <div class="image-item">
-        <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/7.webp" alt="京都大学学術リポジトリ">
-        <!-- 链接元素，点击后跳转到指定网址 -->
-        <a href="https://commons.research.kyoto-u.ac.jp/">京都大学学術リポジトリ</a>
+        <a href="https://commons.research.kyoto-u.ac.jp/">本学の地球規模課題へ向けた取り組み<br>Future Commons</a>
       </div>
       
       <div class="image-item">
-        <!-- 图片元素，显示图片并提供替代文本 -->
         <img src="images/8.webp" alt="京都大学公式サイト">
-        <!-- 链接元素，点击后跳转到指定网址 -->
         <a href="https://www.kyoto-u.ac.jp/">広報誌     紅萠</a>
       </div>
     </div>
