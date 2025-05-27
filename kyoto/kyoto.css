@@ -4,7 +4,7 @@ h1{
   margin: 0px 0px 16px;
   padding: 0px;
   border-width: 0px;
-  font: 500 20px / 1.25 "Lora", "Noto Sans JP", serif;
+  font: 500 24px / 1.25 "Lora", "Noto Sans JP", serif;
   display: block;
 }
 
@@ -18,6 +18,8 @@ h1{
 .image-with-a a:hover {
   text-decoration: underline;
 }
+
+  
 
 
 

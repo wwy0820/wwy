@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>京都大学</title>
+    <!-- 引入 Lora 字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="kyoto.css">
     <style>
       :root {
@@ -17,6 +21,15 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
+      }
+      
+      /* 添加日语部分的样式 */
+      .japanese-text {
+        font-size: 11px;
+        line-height: 14px;
+        margin-bottom: 4px;
+        
+        /* 可添加其他样式 */
       }
       
       .image-grid {
@@ -64,11 +77,8 @@
         text-overflow: ellipsis;
         height: 60px; 
         z-index: 2;
-        font-family: "Noto Sans JP", sans-serif;
-        
-       
-      
-        
+        /* 应用 Lora 字体 */
+        font-family: "Lora", "Noto Sans JP", serif;
       }
 
       .image-item:hover img {
@@ -102,7 +112,11 @@
       
       <div class="image-item">
         <img src="images/2.webp" alt="本学の動画がまとめて楽しめるサイト">
-        <a href="https://www.channel.pr.kyoto-u.ac.jp">本学の動画がまとめて楽しめるサイト<br>KyotoU Channel</a>
+        <a href="https://www.channel.pr.kyoto-u.ac.jp">
+            <span class="japanese-text">本学の動画がまとめて楽しめるサイト</span>
+            <br>
+            KyotoU Channel
+        </a>
       </div>
       
       <div class="image-item">
