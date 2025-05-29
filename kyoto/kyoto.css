@@ -18,6 +18,99 @@ h1{
 .image-with-a a:hover {
   text-decoration: underline;
 }
+:root {
+  --primary-color: #00205b;
+  --secondary-bg: #d9dbde;
+  --item-gap: 20px;
+  --hover-scale: 1.1;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 添加日语部分的样式 */
+.japanese-text {
+  font-size: 11px;
+  line-height: 14px;
+  margin-bottom: 4px;
+  
+  /* 可添加其他样式 */
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--item-gap);
+}
+
+.image-item {
+  width: calc(25% - var(--item-gap));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden; 
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease; 
+  transform-origin: center; 
+  position: relative; 
+  z-index: 1;
+}
+
+.image-item a {
+  color: var(--primary-color); 
+  font-weight: bold;
+  word-break: keep-all;
+  background-color: var(--secondary-bg); 
+  padding: 10px 12px; 
+  border-radius: 4px; 
+  transition: background-color 0.3s ease; 
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 2; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  align-items: flex-start; 
+  width: 100%; 
+  box-sizing: border-box; 
+  text-decoration: none;
+  unicode-bidi: isolate;
+  /* 固定高度，确保背景区域大小不变 */
+  height: 60px; 
+  z-index: 2;
+  /* 应用 Lora 字体 */
+  font-family: "Lora", "Noto Sans JP", serif;
+}
+
+.image-item:hover img {
+  transform: scale(var(--hover-scale)); 
+}
+
+.image-item:hover a {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .image-item {
+    width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 600px) {
+  .image-item {
+    width: 100%;
+  }
+}
 
   
 

@@ -8,99 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="kyoto.css">
-    <style>
-      :root {
-        --primary-color: #00205b;
-        --secondary-bg: #d9dbde;
-        --item-gap: 20px;
-        --hover-scale: 1.1;
-      }
-
-      body {
-        font-family: Arial, sans-serif;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      
-      /* 添加日语部分的样式 */
-      .japanese-text {
-        font-size: 11px;
-        line-height: 14px;
-        margin-bottom: 4px;
-        
-        /* 可添加其他样式 */
-      }
-      
-      .image-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: var(--item-gap);
-      }
-      
-      .image-item {
-        width: calc(25% - var(--item-gap));
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        overflow: hidden; 
-      }
-
-      .image-item img {
-        width: 100%;
-        height: auto;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease; 
-        transform-origin: center; 
-        position: relative; 
-        z-index: 1;
-      }
-
-      .image-item a {
-        color: var(--primary-color); 
-        font-weight: bold;
-        word-break: keep-all;
-        background-color: var(--secondary-bg); 
-        padding: 10px 12px; 
-        border-radius: 4px; 
-        transition: background-color 0.3s ease; 
-        display: flex; 
-        justify-content: flex-start; 
-        align-items: center;
-        width: 100%; 
-        box-sizing: border-box; 
-        text-decoration: none;
-        unicode-bidi: isolate;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        height: 60px; 
-        z-index: 2;
-        /* 应用 Lora 字体 */
-        font-family: "Lora", "Noto Sans JP", serif;
-      }
-
-      .image-item:hover img {
-        transform: scale(var(--hover-scale)); 
-      }
-
-      .image-item:hover a {
-        text-decoration: underline;
-      }
-      
-      @media (max-width: 900px) {
-        .image-item {
-          width: calc(50% - 15px);
-        }
-      }
-      
-      @media (max-width: 600px) {
-        .image-item {
-          width: 100%;
-        }
-      }
-    </style>
   </head>
   <body>
     <h1>Features</h1>
@@ -136,12 +43,14 @@
       
       <div class="image-item">
         <img src="images/6.webp" alt="京都大学アカデミックキャラバン">
-        <a href="https://www.kuac.kyoto-u.ac.jp/">受験生のための総合情報サイト 京都大学受験生ナビゲーション</a>
+        <a href="https://www.kuac.kyoto-u.ac.jp/">
+          <span class="japanese-text">受験生のための総合情報サイト</span><br> 京都大学受験生ナビゲーション</a>
       </div>
       
       <div class="image-item">
         <img src="images/7.webp" alt="京都大学学術リポジトリ">
-        <a href="https://commons.research.kyoto-u.ac.jp/">本学の地球規模課題へ向けた取り組み<br>Future Commons</a>
+        <a href="https://commons.research.kyoto-u.ac.jp/">
+          <span class="japanese-text">本学の地球規模課題へ向けた取り組み</span><br>Future Commons</a>
       </div>
       
       <div class="image-item">
